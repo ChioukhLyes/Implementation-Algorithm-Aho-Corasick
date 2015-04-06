@@ -4,7 +4,7 @@
 
 ### Méthodes
 
-Utilisation de trois méethodes pour repréesenter l'arbre
+Utilisation de trois méthodes pour représenter l'arbre
  - Une matrice de transitions ;
  - Un tableau de listes d'adjacence ;
  - Une table de transitions pour la racine et un tableau de listes d'adjacence
