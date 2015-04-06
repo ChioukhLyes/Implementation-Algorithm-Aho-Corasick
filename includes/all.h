@@ -1,0 +1,84 @@
+/***************************/
+/* Algorithmique du texte */
+/*************************/
+/*    Fichier ALL.H     */
+/**********************/
+/*   CHIOUKH LYES    */
+/********************/
+/*******************/
+/*________________*/
+
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+#include <time.h>
+#define WORD_MAX_LENGTH 60
+#define UNSIGNED_CHAR_MAX 256
+#define WORDS_NB 100
+#define TEXT_SIZE 5000000
+
+/* Includes de la structure list  */
+struct _list {
+  int targetNode;	/* cible de la transition     */
+  unsigned char letter; /* etiquette de la transition */
+  struct _list *next;	/* maillon suivant            */
+};
+
+typedef struct _list *List;
+
+/* Includes de la structure listes  */
+struct _trieListes {
+	
+  int maxNode;	         	/* Nombre maximal de noeuds du trie    */
+  int nextNode;	        	/* Indice du prochain noeud disponible */
+  List *transition; 		/* listes d’adjacence                  */
+  char *finite;	    		/* etats terminaux                     */
+  int *mon_suppl;		/* état de suppléance                  */
+  
+};
+
+/* Includes de la structure matrice  */
+
+struct _trieMatrice {
+  int maxNode;	   		/* Nombre maximal de noeuds du trie	*/
+  int nextNode;	    		/* Indice du prochain noeud disponible 	*/
+  int **transition; 		/* matrice de transition 		*/
+  char *finite;	   		/* etats terminaux 			*/
+  int *mon_suppl;		/* état de suppléance                  	*/
+};
+
+/* Includes de la structure mixte */
+
+struct _trieMixte {
+  int maxNode;		  	/* Nombre maximal de noeuds du trie 		*/
+  int nextNode;		  	/* Indice du prochain noeud disponible 		*/
+  int *transitionRoot;	  	/* transitions de la racine 			*/
+  List *transitionOthers; 	/* transitions des autres noeuds 		*/
+  char *finite;		  	/* etats terminaux 				*/
+  int *mon_suppl;		/* état de suppléance             	     	*/
+};
+
+/* Les transitions */
+struct _transition {
+  int origine;
+  int vers;
+  unsigned char letter;
+  struct _transition *prochain;
+};
+
+typedef struct _transition *Trans;
+/* Les elements de la queue */
+
+struct _element {
+	int valeur;
+	struct _element *prochain;
+};
+
+typedef struct _element *Element;
+struct _queue {
+	int taille;
+	Element debut;
+	Element fin;
+};
+typedef struct _queue *Queue;
+/*Fin*/

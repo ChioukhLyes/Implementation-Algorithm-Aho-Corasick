@@ -1,0 +1,77 @@
+/***************************/
+/* Algorithmique du texte */
+/*************************/
+/*    Fichier README    */
+/***********************/
+/**********************/
+/*   CHIOUKH LYES    */
+/********************/
+/*******************/
+/*________________*/
+
+/************** Présentation **************/
+
+Implentation de l'algorithme Aho-Corasick de recherche exacte d'un ensemble de mots dans un texte.
+
+/************** Organisation **************/
+
+//binairies
+Le dossier 'binairies' contient l'ensemble des exécutables notament :
+	- ac-liste.exe		/* Implentation d'AC avec la méthode des listes d'adjacence */
+	- ac-matrice.exe	/* Implentation d'AC avec la méthode des matrices de transitions */
+	- ac-mixte.exe		/* Implentation d'AC avec la méthode mixte */
+	- genere-mots.exe	/* Générateur pseudo-aléatoire des mots */
+	- genere-texte.exe	/* Générateur pseudo-aléatoire des textes */
+
+//includes
+Le dossier 'includes' contient les bibliothéques sous forme d'un seul fichier 'all.h' qui contient toutes les structures nécessaires pour l'exécution du programme.
+//objects
+Le dossier 'objects' contient les fichier .o
+//sources
+Le dossier 'sources' contient tout les fichiers sources '.c'.
+
+/************** Exécution **************/
+
+Deux méthodes pour lancer les exécutables :
+
+//Méthode 1 Sans paramètres
+
+1 La commande : make 
+/* Pour lancer la compilation et l'exécution de tous les fichiers sources
+*  Si après l'exécution de la commande 'make' on aura 'make: Nothing to be done for `Projet'.', il faut alors
+*  lancer la commande 'make clean' qui va supprimer tout les fichiers '.o' et .exe', et relancer après la commande 'make'
+*/
+2 Lancer la commande : ./NOM
+
+/* NOM = {ac-listes.exe, ac-matrice.exe, ac-mixte.exe, genere-mots.exe, genere-texte.exe}
+*  Pour les exécutables genere-mots.exe et genere-texte.exe, l'exécution se lance et se termine sans rien afficher et les fichiers sont créés.
+*  Pour les exécutables ac-listes.exe, ac-matrice.exe et ac-mixte.exe, l'utilisateur doit donner le nom du fichier qui contient le texte en premier puis le nom du fichier qui contient les mots a chercher.
+*/
+
+//Méthode 2 avec paramètres
+
+1 commande : make 
+/* Pour lancer la compilation est l'exécution de tout les fichiers source
+*  Si après l'exécution de la commande 'make' on aura 'make: Nothing to be done for `Projet'.', il faut alors
+*  lancer la commande 'make clean' qui va supprimer tout les fichiers '.o' et .exe', et relancer après la commande 'make'
+*/
+
+2 lancer la commande : ./NOM paramètre1 paramètre2
+
+/* NOM = {ac-listes.exe, ac-matrice.exe, ac-mixte.exe, genere-mots.exe, genere-texte.exe}
+*  Pour les exécutable genere-mots.exe et genere-texte.exe, l'exécution se lance et se termine sans rien afficher et les fichiers sont créés.
+*  Pour les exécutable ac-liste.exe, ac-matrice.exe et ac-mixte.exe, le premier paramètre = fichier qui contient le texte 
+   deuxième paramètre = fichier qui contient les mots a chercher.
+*/
+
+/************** Exécution **************/
+
+Les résultats, sont :
+1 - Nombre d'occurrences trouvées pour tous les mots donnés.
+
+/* Plus la taille de l'alphabet est grande, plus le nombre d'occurrences est petit */
+
+2 - Le temps d'exécution de l'algorithme AC.
+
+/*FIN*/
+
